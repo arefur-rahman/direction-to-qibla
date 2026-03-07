@@ -1,7 +1,7 @@
 # 🧭 Qibla Direction Finders
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/arefur-rahman/direction-to-qibla.git/main/public/favicon.png" width="80" alt="Logo" />
+  <img src="https://raw.githubusercontent.com/arefur-rahman/direction-to-qibla/refs/heads/main/public/favicon.png" width="80" alt="Logo" />
 </p>
 
 A beautifully crafted, high-precision web application to help you find the Qibla direction from anywhere in the world. Designed with ❤️ for a seamless, intuitive experience.

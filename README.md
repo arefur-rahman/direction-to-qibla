@@ -1,10 +1,14 @@
 # 🧭 Qibla Direction Finders
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/arefur-rahman/direction-to-qibla/refs/heads/main/public/favicon.png" width="80" alt="Logo" />
+  <a href="https://direction-to-qibla.vercel.app/" target="_blank">
+    <img src="https://raw.githubusercontent.com/arefur-rahman/direction-to-qibla/refs/heads/main/public/favicon.png" width="80" alt="Logo" />
+  </a>
 </p>
 
 A beautifully crafted, high-precision web application to help you find the Qibla direction from anywhere in the world. Designed with ❤️ for a seamless, intuitive experience.
+
+[**✨ View Live Demo**](https://direction-to-qibla.vercel.app/)
 
 ---
 

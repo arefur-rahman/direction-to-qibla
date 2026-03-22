@@ -5,10 +5,16 @@ export const Footer = () => {
 
             <p className="text-slate-400/80 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-center">
                 Direction to Qibla{" "}
-                <span className="text-slate-600 mx-1">/</span> by Arefur Rahman{" "}
-                <span className="text-emerald-500/50 italic ml-0.5">
-                    with ❤️
-                </span>
+                <span className="text-slate-600 mx-1">/</span> by{" "}
+                <a
+                    href="https://www.linkedin.com/in/md-arefur-rahman-khan-74188232b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-500/50 hover:text-emerald-400 transition-all duration-300"
+                >
+                    Arefur Rahman
+                </a>{" "}
+                <span className="italic ml-0.5">with ❤️</span>
             </p>
 
             <p className="text-slate-500/40 text-[9px] uppercase tracking-[0.15em] text-center max-w-[280px] md:max-w-none leading-relaxed">
@@ -16,7 +22,7 @@ export const Footer = () => {
             </p>
 
             <a
-                href="https://github.com/arefurrahman/direction-to-qibla"
+                href="https://github.com/arefur-rahman/direction-to-qibla.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-emerald-500/40 hover:text-emerald-400 transition-all duration-300 text-[10px] font-bold uppercase tracking-[0.25em] mt-2 group"

@@ -13,12 +13,12 @@ export const StatusCard = ({
 }: StatusCardProps) => {
     return (
         <div className="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-4 backdrop-blur-md space-y-3 relative overflow-hidden">
-            <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
+            <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3 min-w-0">
                     <div
-                        className={`w-2 h-2 rounded-full ${coords ? "bg-emerald-500 animate-pulse" : "bg-amber-500"}`}
+                        className={`w-2 h-2 rounded-full shrink-0 ${coords ? "bg-emerald-500 animate-pulse" : "bg-amber-500"}`}
                     />
-                    <p className="text-sm font-medium text-slate-100 truncate">
+                    <p className="text-xs font-medium text-slate-100 truncate">
                         {status}
                         {isCompassActive && " • Compass Active"}
                     </p>
@@ -26,7 +26,7 @@ export const StatusCard = ({
                 
                 <button 
                    onClick={onManualClick}
-                   className="text-[10px] font-mono font-bold text-emerald-500 hover:text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-2.5 py-1 rounded-full transition-all border border-emerald-500/20 active:scale-95"
+                   className="shrink-0 text-[10px] font-mono font-bold text-emerald-500 hover:text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-2.5 py-1 rounded-full transition-all border border-emerald-500/20 active:scale-95"
                 >
                     {coords ? "EDIT" : "MANUAL"}
                 </button>

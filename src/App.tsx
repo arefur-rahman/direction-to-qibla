@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Compass } from "./components/Compass";
 import { StatusCard } from "./components/StatusCard";
 import { Footer } from "./components/Footer";
+import { ManualLocationModal } from "./components/ManualLocationModal";
 
 function App() {
     const [status, setStatus] = useState<string>("Initializing...");
@@ -14,6 +15,13 @@ function App() {
     const [bearing, setBearing] = useState<number | null>(null);
     const [heading, setHeading] = useState<number>(0);
     const [isCompassActive, setIsCompassActive] = useState(false);
+    const [isManualModalOpen, setIsManualModalOpen] = useState(false);
+
+    const handleSetManualLocation = (lat: number, lon: number) => {
+        setCoords({ lat, lon });
+        setBearing(getQiblaDirection(lat, lon));
+        setStatus("Manual Location Set");
+    };
 
     const getLocation = useCallback((highAccuracy: boolean) => {
         if (!navigator.geolocation) {
@@ -139,6 +147,7 @@ function App() {
                     status={status}
                     isCompassActive={isCompassActive}
                     coords={coords}
+                    onManualClick={() => setIsManualModalOpen(true)}
                 />
 
                 <button
@@ -150,7 +159,7 @@ function App() {
                             setUseHighAccuracy(true);
                         }
                     }}
-                    className="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white py-4 rounded-2xl font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2 group"
+                    className="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white py-4 rounded-2xl font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2 group cursor-pointer"
                 >
                     <svg
                         className={`w-5 h-5 group-hover:rotate-180 transition-transform duration-500 ${status.includes("Fetching") ? "animate-spin" : ""}`}
@@ -170,6 +179,13 @@ function App() {
 
                 <Footer />
             </div>
+
+            <ManualLocationModal
+                isOpen={isManualModalOpen}
+                onClose={() => setIsManualModalOpen(false)}
+                onSetLocation={handleSetManualLocation}
+                currentCoords={coords}
+            />
         </div>
     );
 }

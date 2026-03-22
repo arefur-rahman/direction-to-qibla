@@ -1,7 +1,4 @@
 import {
-    getDirectionParts,
-    describeArc,
-    polarToCartesian,
     getDirectionDescription,
 } from "../utils/qibla-math";
 
@@ -67,53 +64,10 @@ export const Compass = ({ heading, bearing }: CompassProps) => {
                             <div className="absolute inset-0">
                                 {/* Marking Arc/Line */}
                                 <svg
-                                    className="absolute inset-0 w-full h-full pointer-events-none drop-shadow-[0_0_5px_rgba(251,191,36,0.3)]"
+                                    className="absolute inset-0 w-full h-full pointer-events-none"
                                     viewBox="0 0 100 100"
                                 >
-                                    {(() => {
-                                        const parts =
-                                            getDirectionParts(bearing);
-                                        if (parts.deg === undefined)
-                                            return null;
-                                        return (
-                                            <>
-                                                <path
-                                                    d={describeArc(
-                                                        50,
-                                                        50,
-                                                        42,
-                                                        parts.base,
-                                                        bearing,
-                                                    )}
-                                                    fill="none"
-                                                    stroke="rgba(251, 191, 36, 0.6)"
-                                                    strokeWidth="1.5"
-                                                    strokeLinecap="round"
-                                                    className="animate-in fade-in duration-1000"
-                                                />
-                                                <circle
-                                                    cx={
-                                                        polarToCartesian(
-                                                            50,
-                                                            50,
-                                                            42,
-                                                            parts.base,
-                                                        ).x
-                                                    }
-                                                    cy={
-                                                        polarToCartesian(
-                                                            50,
-                                                            50,
-                                                            42,
-                                                            parts.base,
-                                                        ).y
-                                                    }
-                                                    r="1.5"
-                                                    fill="#fbbf24"
-                                                />
-                                            </>
-                                        );
-                                    })()}
+                                    {/* Marking Arc Removed */}
                                 </svg>
 
                                 <div

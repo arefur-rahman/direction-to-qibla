@@ -14,7 +14,7 @@ export const Footer = () => {
                 >
                     Arefur Rahman
                 </a>{" "}
-                <span className="italic ml-0.5">with ❣️</span>
+                <span className="italic ml-0.5">with ❤️</span>
             </p>
 
             <p className="text-slate-500/40 text-[9px] uppercase tracking-[0.15em] text-center max-w-[280px] md:max-w-none leading-relaxed">

@@ -18,7 +18,8 @@ export const Footer = () => {
             </p>
 
             <p className="text-slate-500/40 text-[9px] uppercase tracking-[0.15em] text-center max-w-[280px] md:max-w-none leading-relaxed">
-                © 2026 • Engineered for Geospatial Precision
+                © {new Date().getFullYear()} • Engineered for Geospatial
+                Precision
             </p>
 
             <a
